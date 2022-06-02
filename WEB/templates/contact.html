@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock title %}
+
+{% block body %}
+
+<div class="container-fluid px-0 ">
+<img src="/static/images/contact.jfif" class="d-block w-100 mx-0" alt="...">
+<h1 class="text-center" style="color:teal">Contact Us</h1>
+<form method="POST" action="/contact">
+
+
+{% csrf_token %}    
+    <div class="mb-3">
+      <label for="email" class="form-label" style="color:teal">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text" style="color:teal">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1" style="color:teal">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock body %}
+
